@@ -24,7 +24,7 @@ A device is sending data with resources `temperature` and `humidity` to your Pro
 
 
 ### Start to create your Solution:
-Remember to `exosite --deploy` after you insert new code.
+Remember to `exosite --init` when you begin, and `exosite --deploy` after you insert new code.
 
 #### api_routes.lua
 Insert the following code at the final line, and don't remove the comments.

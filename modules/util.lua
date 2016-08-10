@@ -87,7 +87,7 @@ end
 
 -- store device settings to the key value store
 function kv_write(sn, values)
-  Keystore.set({key = "sn_" .. sn, value = to_json(values)})
+  Keystore.set({key = "identifier_" .. sn, value = to_json(values)})
 end
 
 -- return the device's temperature, humidity, state
