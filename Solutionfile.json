@@ -1,10 +1,15 @@
 {
-  "default_page": "index.html",
-  "file_dir": "assets",
-  "custom_api": "api_routes.lua",
-  "event_handler": {
-    "device": {
-      "datapoint": "service_handlers/product.lua"
+    "default_page": "index.html",
+    "file_dir": "assets",
+    "modules": {
+        "auth": "modules/util.lua",
+        "debug": "modules/debug.lua",
+        "listen": "modules/listen.lua"
+    },
+    "custom_api": "api_routes.lua",
+    "event_handler": {
+        "device": {
+            "datapoint": "service_handlers/product.lua"
+        }
     }
-  }
 }

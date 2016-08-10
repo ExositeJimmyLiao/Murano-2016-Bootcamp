@@ -1,10 +1,10 @@
 --#ENDPOINT GET /development/test
 return 'Hello World! \r\nI am a test Murano Solution API Route entpoint'
 
---#ENDPOINT GET /development/storage/keyvalue
+--#ENDPOINT GET /development/storage/keyvalue/{identifier}
 -- Description: Show current key-value data for a specific unique device or for full solution
--- Parameters: ?device=<uniqueidentifier>
-local identifier = tostring(request.parameters.device)
+-- Parameters: ?identifier=<uniqueidentifier>
+local identifier = tostring(request.parameters.identifier)
 
 if identifier == 'all' or identifier == "nil" then
   local response_text = 'Getting Key Value Raw Data for: Full Solution: \r\n'
@@ -31,7 +31,7 @@ else
   return 'Getting Key Value Raw Data for: Device Identifier: '..identifier..'\r\n'..to_json(resp)
 end
 
---#ENDPOINT GET /development/storage/timeseries
+--#ENDPOINT GET /development/storage/timeseries/{identifier}
 -- Description: Show current time-series data for a specific unique device
 -- Parameters: ?identifier=<uniqueidentifier>
 local identifier = tostring(request.parameters.identifier)
@@ -52,7 +52,7 @@ else
 end
 
 
---#ENDPOINT GET /development/device/data
+--#ENDPOINT GET /development/device/data/{identifier}/{window}
 -- Description: Get timeseries data for specific device
 -- Parameters: ?identifier=<uniqueidentifier>&window=<number>
 local identifier = tostring(request.parameters.identifier) -- ?identifier=<uniqueidentifier>
