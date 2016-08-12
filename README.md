@@ -127,7 +127,9 @@ function autoLightbulb() {
             setTimeout(autoLightbulb, 1000);
         },
         crossDomain: true,
-        error: null,
+        error: function() {
+            setTimeout(autoLightbulb, 1000);
+        },
         statusCode: {
             504: null
         },
