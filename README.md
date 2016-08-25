@@ -99,11 +99,10 @@ Insert the following code at the line 68 (between the tag `</tr>` and `</table>`
         <p>
             <input id="tohour" type="text" value="24" style="text-align: right; width:10em"></input> O'clock
         </p>
-        <p>
-            <label>
-                <input id="mylight" type="checkbox" name="mylight" value="light" checked> On/Off
-            </label>
-        </p>
+        <label class="switch">
+            <input id="mylight" type="checkbox" name="mylight" value="light" checked>
+            <div class="slider round"></div>
+        </label>
     </td>
 </tr>
 ```
